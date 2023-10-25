@@ -26,7 +26,7 @@ const readCSV = fs.readFile(pathToCSV, 'utf8', function(err,csvData) {
 
 const msg = {
 	// MASS SEND HERE!!!!!
-	to:'brodriguez410@gmail.com',
+	to:'test@gmail.com',
 	from: 'communications@cougarcs.com',
 	subject: 'CougarCS Resume Submission for Company Opportunities by Oct 26, 11:59PM',
 	// text: 'The text gets overwritten by html',
