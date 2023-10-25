@@ -4,13 +4,14 @@ import { createRequire } from 'module'
 const require = createRequire(import.meta.url);
 
 const sgMail = require('@sendgrid/mail');
+// must export your API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const fs = require("fs");
-const pathToAttachment = `ResumeDatabaseInstructions.pdf`;
+const pathToAttachment = `yourpdf.pdf`;
 const attachment = fs.readFileSync(pathToAttachment).toString("base64");
 
-const pathToCSV = `MemberEmailList.csv`;
+const pathToCSV = `nameofyourcsv.csv`;
 let emailArray = [];
 
 const readCSV = fs.readFile(pathToCSV, 'utf8', function(err,csvData) {
@@ -26,32 +27,18 @@ const readCSV = fs.readFile(pathToCSV, 'utf8', function(err,csvData) {
 
 const msg = {
 	// MASS SEND HERE!!!!!
-	to:'test@gmail.com',
-	from: 'communications@cougarcs.com',
+	to:'user1@gmail.com',
+	from: 'yoursender@email.com',
 	subject: 'CougarCS Resume Submission for Company Opportunities by Oct 26, 11:59PM',
 	// text: 'The text gets overwritten by html',
-	html: `Hello CougarCS Members! 
+	html: `You can write a simple message in the text block or in the HTML block! 
 	<br><br> 
-	We hope you're having a great day. 
-	This is a friendly reminder to fill out this <a href="https://resume.cougarcs.com">form</a>, 
-	and submit your resumes for potential company opportunities by Thursday, October 26th, 11:59 PM. 
-	Please refer to the attached PDF for detailed instructions. If you run into any challenges or have questions, 
-	please don't hesitate to reach out to Johnny Le, our Vice President of Activities. You can reach out to him 
-	via Email at vp.activities@cougarcs.com or Discord at junnybe. 
-	<br><br> 
-	Your resume submission plays a crucial role 
-	in connecting you with promising career prospects with companies (Such as Google!), and 
-	we're committed to helping you succeed.
-	<br><br> 
-	Thank you for your cooperation!
-	<br><br> 
-	Best regards,
-	<br>
-	CougarCS`,
+	Just like a normal HTML file, you can use any HTML tags - even links!
+	Here's a link to UH's CougarCS Website: <a href="https://cougarcs.com"></a>`, 
 	attachments: [
 		{
 			content: attachment,
-			filename: "ResumeDatabaseInstructions.pdf",
+			filename: "nameofyourpdf.pdf",
 			type: "application/pdf",
 			disposition: "attachment"
 		}
