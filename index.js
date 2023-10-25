@@ -29,7 +29,7 @@ const msg = {
 	// MASS SEND HERE!!!!!
 	to:'user1@gmail.com',
 	from: 'yoursender@email.com',
-	subject: 'CougarCS Resume Submission for Company Opportunities by Oct 26, 11:59PM',
+	subject: 'Write Your Subject Here',
 	// text: 'The text gets overwritten by html',
 	html: `You can write a simple message in the text block or in the HTML block! 
 	<br><br> 
