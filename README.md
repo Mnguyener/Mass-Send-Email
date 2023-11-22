@@ -2,9 +2,12 @@
 with SendGrid's Email API and Node.js!
 
 ### Email API
-Once you create a Sendgrid account or login, click on the Email API tab on the navigation bar on the left. This will open up two options: Dynamic Templates and Integration Guide.
+Once you create a Sendgrid account or login, click on the Email API tab on the navigation bar on the left. This will open up two options: Dynamic Templates and Integration Guide. 
+<br>
 Click on Integration Guide and choose the Web API as your setup method.
-Choose a language you are comfortable with. I found tutorials with Node.js so that is what I went with. After choosing a language, Sendgrid gives you easy and simple documentation on how to use their API. I will copy its steps below for your convenience.
+Choose a language you are comfortable with. I found tutorials with Node.js so that is what I went with.
+<br>
+After choosing a language, Sendgrid gives you easy and simple documentation on how to use their API. I will copy its steps below for your convenience.
 
 ### Make sure you have Node.js prerequisites
 Sendgrid's library requires Node.js version 0.10, 0.12, or 4.
@@ -19,7 +22,7 @@ Copy the code block from step 3 and run it in your shell.
 `echo "sendgrid.env" >> .gitignore`
 `source ./sendgrid.env`
 
-Each time you want to run your JS script on a fresh shell, you need to run `source ./sendgrid.env` first to activate your API key. The code above basically writes your API key in a env file called sendgrid.env,so make sure to preserve that file!
+Each time you want to run your JS script on a fresh shell, you need to run `source ./sendgrid.env` first to activate your API key. The code above basically writes your API key in a env file called sendgrid.env, so make sure to preserve that file! 
 
 ### Install the npm package
 Npm comes installed with Node.js since node version 0.8.x, therefore you likely already have it.
