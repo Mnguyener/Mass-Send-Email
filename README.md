@@ -19,8 +19,7 @@ Copy the code block from step 3 and run it in your shell.
 `echo "sendgrid.env" >> .gitignore`
 `source ./sendgrid.env`
 
-Each time you want to run your JS script on a fresh shell, you need to run `source ./sendgrid.env` first to activate your API key. Thus, store your API key 
-somewhere safe and/or encrypt it!
+Each time you want to run your JS script on a fresh shell, you need to run `source ./sendgrid.env` first to activate your API key. The code above basically writes your API key in a env file called sendgrid.env,so make sure to preserve that file!
 
 ### Install the npm package
 Npm comes installed with Node.js since node version 0.8.x, therefore you likely already have it.
